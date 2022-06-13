@@ -1,0 +1,6 @@
+"puzzles"
+{
+	"title"		"Puzzles"
+	"base"		""
+	"menusystem"	"1"
+}
