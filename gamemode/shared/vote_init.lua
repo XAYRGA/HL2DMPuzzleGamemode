@@ -6,7 +6,7 @@ MapVote.Config =  {
     EnableCooldown = true,
     MapsBeforeRevote = 3,
     RTVPlayerCount = 3,
-    MapPrefixes = {"js_","cg_","puzzle_"}
+    MapPrefixes = {"js_","cg_","puzzle_","mph_","poison_","wuld_","rememberance_","monk_"}
 }
 
 

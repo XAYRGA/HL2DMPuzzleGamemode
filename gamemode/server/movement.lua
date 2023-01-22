@@ -49,6 +49,7 @@ function GM:OnSprintMove(ply,mv)
 				ply.Sprinting = true
 			end
 		else 
+
 			ply.Sprinting = false 
 		end
 	else 
@@ -74,6 +75,10 @@ function GM:OnSprintMove(ply,mv)
     if (ply.LastSprinting!=ply.Sprinting) then 
         if (ply.Sprinting==true) then 
             ply:EmitSound("player/suit_sprint.wav")
+		else 
+			if (ply:GetNWInt("Sprint") < 1) then 
+				ply:EmitSound("common/wpn_denyselect.wav")
+			end
         end
         ply.LastSprinting = ply.Sprinting
     end

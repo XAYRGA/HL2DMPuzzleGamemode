@@ -30,7 +30,7 @@ function ENT:Think()
 		end 
 	end
 	if (IsValid(self.WeaponEntity) and self.WeaponEntity:GetPos():Distance(self.OriginalPos) > 120) then 
-		if (self.LastSpawn - CurTime() > 70) then 
+		if (CurTime() - self.LastSpawn > 30) then 
 			self.WeaponEntity:Remove()
 		end
 	end

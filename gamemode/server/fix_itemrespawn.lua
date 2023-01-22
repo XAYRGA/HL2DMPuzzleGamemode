@@ -30,6 +30,7 @@ local respawnables = {
 	"item_ammo_smg1",
 	"item_ammo_pistol",
 	"item_smg1_grenade",	
+	"item_ammo_357_large"
 }
 
 
@@ -50,7 +51,6 @@ function GM:AddRespawnables()
 			v:Remove()
 		end
 	end
-
 end
 
 hook.Add("InitPostEntity","RESP_PatchMap",GM.AddRespawnables)

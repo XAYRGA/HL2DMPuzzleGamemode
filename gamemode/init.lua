@@ -3,18 +3,18 @@ include( 'shared.lua' )
 AddCSLuaFile('shared.lua')
 
 for k,v in pairs (file.Find("puzzles/gamemode/shared/*.lua","LUA")) do
-   MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("SH:  " .. v .. "\n")
+   MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("SH: " .. v )
 	AddCSLuaFile("puzzles/gamemode/shared/" .. v)
 	include("puzzles/gamemode/shared/" .. v);
 end
 
 for k,v in pairs (file.Find("puzzles/gamemode/server/*.lua","LUA")) do
-	MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("SV: " .. v .. "\n")
+	MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("SV: " .. v ) 
 	include("puzzles/gamemode/server/" .. v);
 end
 
 for k,v in pairs (file.Find("puzzles/gamemode/client/*.lua","LUA")) do
-	MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("CL: " .. v .. "\n")
+	MsgC(Color(251,53,255,255),"[GAMEMODE]: ") print("CL: " .. v )
 	AddCSLuaFile("puzzles/gamemode/client/" .. v)
 end
 
@@ -58,3 +58,10 @@ end
 
 
 
+function GM:ShowTeam(ply)
+
+end 
+
+function GM:PlayerCanJoinTeam(ply,team)
+   return false 
+end
